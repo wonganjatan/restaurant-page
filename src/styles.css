@@ -1,10 +1,6 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.nav-right {
-    display: flex;
-    gap: 20px;
+    gap: 50px;
 }
