@@ -14,3 +14,8 @@ const nameHeader = document.createElement('h1')
 nameHeader.textContent = "Warung Kopi"
 name.appendChild(nameHeader)
 content.appendChild(name)
+
+const introParagraph = document.createElement('p')
+introParagraph.textContent = "Warung Kopi is the best coffee shop in the world"
+introduction.appendChild(introParagraph)
+content.appendChild(introduction)
