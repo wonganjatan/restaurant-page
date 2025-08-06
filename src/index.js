@@ -51,3 +51,7 @@ content.appendChild(hours)
 const locationHeader = document.createElement('h1')
 locationHeader.textContent = "Location"
 content.appendChild(locationHeader)
+
+const locationParagraph = document.createElement('p')
+locationParagraph.textContent = "123 Privacy Please, Indonesia"
+content.appendChild(locationParagraph)
