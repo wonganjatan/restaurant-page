@@ -1,5 +1,4 @@
 import "./styles.css"
-// test new ubuntu
 
 const home = document.querySelector('#home')
 const menu = document.querySelector('#menu')
@@ -82,20 +81,32 @@ const homeContent = () => {
     }
 }
 
+const menuContent = () => {
+    content.textContent = ""
+
+    content.appendChild(createNameSection())
+
+    function createNameSection() {
+        const nameDiv = document.createElement('div')
+        const nameHeader = document.createElement('h1')
+        nameHeader.textContent = "Menu"
+        nameDiv.appendChild(nameHeader)
+
+        return nameDiv
+    }
+}
+
 
 home.addEventListener('click', () => {
-    alert("You clicked Home")
     homeContent()
 })
 
 menu.addEventListener('click', () => {
-    alert("You clicked Menu")
-    content.textContent = ""
+    menuContent()
 })
 
 contact.addEventListener('click', () => {
     alert("You clicked Contact")
-    content.textContent = ""
 })
 
 homeContent()
