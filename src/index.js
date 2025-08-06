@@ -55,3 +55,18 @@ content.appendChild(locationHeader)
 const locationParagraph = document.createElement('p')
 locationParagraph.textContent = "123 Privacy Please, Indonesia"
 content.appendChild(locationParagraph)
+
+home.addEventListener('click', () => {
+    alert("You clicked Home")
+    content.textContent = ""
+})
+
+menu.addEventListener('click', () => {
+    alert("You clicked Menu")
+    content.textContent = ""
+})
+
+contact.addEventListener('click', () => {
+    alert("You clicked Contact")
+    content.textContent = ""
+})
