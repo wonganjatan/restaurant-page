@@ -7,38 +7,41 @@ const contact = document.querySelector('#contact')
 const content = document.querySelector('.content')
 
 const homeContent = () => {
+    content.textContent = ""
+
     content.appendChild(createNameSection())
     content.appendChild(createIntroductionSection())
     content.appendChild(createHoursSection())
     content.appendChild(createLocationSection())
+
     function createNameSection() {
-        const name = document.createElement('div')
+        const nameDiv = document.createElement('div')
         const nameHeader = document.createElement('h1')
         nameHeader.textContent = "Warung Kopi"
-        name.appendChild(nameHeader)
+        nameDiv.appendChild(nameHeader)
 
-        return name
+        return nameDiv
     }
 
     function createIntroductionSection() {
-        const introduction = document.createElement('div')
+        const introductionDiv = document.createElement('div')
 
         const introParagraph = document.createElement('p')
         introParagraph.textContent = "Warung Kopi is the best coffee shop in the world"
-        introduction.appendChild(introParagraph)
+        introductionDiv.appendChild(introParagraph)
 
-        return introduction
+        return introductionDiv
     }
 
     function createHoursSection() {
-        const hours = document.createElement('div')
+        const hoursDiv = document.createElement('div')
 
         const hoursUnorderedList = document.createElement('ul')
         hoursUnorderedList.style.textDecoration = 'none'
 
         const hoursHeader = document.createElement('h1')
         hoursHeader.textContent = "Hours"
-        hours.appendChild(hoursHeader)
+        hoursDiv.appendChild(hoursHeader)
 
         const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
         for (let i = 0; i < 7; i++) {
@@ -58,30 +61,29 @@ const homeContent = () => {
             hoursUnorderedList.appendChild(list)
         }
 
-        hours.appendChild(hoursUnorderedList)
+        hoursDiv.appendChild(hoursUnorderedList)
 
-        return hours
+        return hoursDiv
     }
 
     function createLocationSection() {
-        const location = document.createElement('div')
+        const locationDiv = document.createElement('div')
 
         const locationHeader = document.createElement('h1')
         locationHeader.textContent = "Location"
-        location.appendChild(locationHeader)
+        locationDiv.appendChild(locationHeader)
         
         const locationParagraph = document.createElement('p')
         locationParagraph.textContent = "123 Privacy Please, Indonesia"
-        location.appendChild(locationParagraph)
+        locationDiv.appendChild(locationParagraph)
 
-        return location
+        return locationDiv
     }
 }
 
 
 home.addEventListener('click', () => {
     alert("You clicked Home")
-    content.textContent = ""
     homeContent()
 })
 
