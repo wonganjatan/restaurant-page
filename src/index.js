@@ -47,3 +47,7 @@ for (let i = 0; i < 7; i++) {
 
 hours.appendChild(hoursUnorderedList)
 content.appendChild(hours)
+
+const locationHeader = document.createElement('h1')
+locationHeader.textContent = "Location"
+content.appendChild(locationHeader)
