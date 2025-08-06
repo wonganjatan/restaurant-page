@@ -1,5 +1,9 @@
 import "./styles.css"
 
+const home = document.querySelector('#home')
+const menu = document.querySelector('#menu')
+const contact = document.querySelector('#contact')
+
 const content = document.querySelector('.content')
 const name = document.createElement('div')
 const introduction = document.createElement('div')
