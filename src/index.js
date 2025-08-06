@@ -33,6 +33,34 @@ const homeContent = () => {
     function createHoursSection() {
         const hours = document.createElement('div')
 
+        const hoursUnorderedList = document.createElement('ul')
+        hoursUnorderedList.style.textDecoration = 'none'
+
+        const hoursHeader = document.createElement('h1')
+        hoursHeader.textContent = "Hours"
+        hours.appendChild(hoursHeader)
+
+        const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        for (let i = 0; i < 7; i++) {
+            const list = document.createElement('li')
+            const day = days[i]
+
+            if (i < 3) {
+                list.textContent = `${day}: 6am - 6pm`
+            } else if (i < 5) {
+                list.textContent = `${day}: 6am - 10pm`
+            } else if (i === 5) {
+                list.textContent = `${day}: 8am - 6pm`
+            } else {
+                list.textContent = `${day}: 8am - 8pm`
+            }
+
+            hoursUnorderedList.appendChild(list)
+        }
+
+        hours.appendChild(hoursUnorderedList)
+
+        return hours
     }
 
     function createLocationSection() {
@@ -41,35 +69,6 @@ const homeContent = () => {
     }
 
     
-    content.appendChild(introduction)
-
-    const hoursUnorderedList = document.createElement('ul')
-    hoursUnorderedList.style.textDecoration = 'none'
-
-    const hoursHeader = document.createElement('h1')
-    hoursHeader.textContent = "Hours"
-    hours.appendChild(hoursHeader)
-
-    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    for (let i = 0; i < 7; i++) {
-        const list = document.createElement('li')
-        const day = days[i]
-
-        if (i < 3) {
-            list.textContent = `${day}: 6am - 6pm`
-        } else if (i < 5) {
-            list.textContent = `${day}: 6am - 10pm`
-        } else if (i === 5) {
-            list.textContent = `${day}: 8am - 6pm`
-        } else {
-            list.textContent = `${day}: 8am - 8pm`
-        }
-
-        hoursUnorderedList.appendChild(list)
-    }
-
-    hours.appendChild(hoursUnorderedList)
-    content.appendChild(hours)
 
     const locationHeader = document.createElement('h1')
     locationHeader.textContent = "Location"
