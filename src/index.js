@@ -8,6 +8,9 @@ const content = document.querySelector('.content')
 
 const homeContent = () => {
     content.appendChild(createNameSection())
+    content.appendChild(createIntroductionSection())
+    content.appendChild(createHoursSection())
+    content.appendChild(createLocationSection())
     function createNameSection() {
         const name = document.createElement('div')
         const nameHeader = document.createElement('h1')
@@ -16,15 +19,28 @@ const homeContent = () => {
 
         return name
     }
-    const introduction = document.createElement('div')
-    const hours = document.createElement('div')
-    const location = document.createElement('div')
+
+    function createIntroductionSection() {
+        const introduction = document.createElement('div')
+
+        const introParagraph = document.createElement('p')
+        introParagraph.textContent = "Warung Kopi is the best coffee shop in the world"
+        introduction.appendChild(introParagraph)
+
+        return introduction
+    }
+
+    function createHoursSection() {
+        const hours = document.createElement('div')
+
+    }
+
+    function createLocationSection() {
+        const location = document.createElement('div')
+
+    }
 
     
-
-    const introParagraph = document.createElement('p')
-    introParagraph.textContent = "Warung Kopi is the best coffee shop in the world"
-    introduction.appendChild(introParagraph)
     content.appendChild(introduction)
 
     const hoursUnorderedList = document.createElement('ul')
