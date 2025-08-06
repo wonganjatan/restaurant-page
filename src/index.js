@@ -66,19 +66,16 @@ const homeContent = () => {
     function createLocationSection() {
         const location = document.createElement('div')
 
+        const locationHeader = document.createElement('h1')
+        locationHeader.textContent = "Location"
+        location.appendChild(locationHeader)
+        
+        const locationParagraph = document.createElement('p')
+        locationParagraph.textContent = "123 Privacy Please, Indonesia"
+        location.appendChild(locationParagraph)
+
+        return location
     }
-
-    
-
-    const locationHeader = document.createElement('h1')
-    locationHeader.textContent = "Location"
-    location.appendChild(locationHeader)
-    
-    const locationParagraph = document.createElement('p')
-    locationParagraph.textContent = "123 Privacy Please, Indonesia"
-    location.appendChild(locationParagraph)
-
-    content.appendChild(location)
 }
 
 
