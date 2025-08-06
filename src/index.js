@@ -64,6 +64,7 @@ const homeContent = () => {
 
 home.addEventListener('click', () => {
     alert("You clicked Home")
+    content.textContent = ""
     homeContent()
 })
 
@@ -76,3 +77,5 @@ contact.addEventListener('click', () => {
     alert("You clicked Contact")
     content.textContent = ""
 })
+
+homeContent()
