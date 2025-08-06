@@ -94,6 +94,20 @@ const menuContent = () => {
 
         return nameDiv
     }
+
+    function createBeverageSection() {
+        const beverageDiv = document.createElement('div')
+        const beverageHeader = document.createElement('h1')
+        beverageDiv.textContent = "Beverage"
+    }
+
+    function createMainDishSection() {
+
+    }
+
+    function createDessertSection() {
+
+    }
 }
 
 
