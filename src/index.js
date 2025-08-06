@@ -23,6 +23,10 @@ content.appendChild(introduction)
 const hoursUnorderedList = document.createElement('ul')
 hoursUnorderedList.style.textDecoration = 'none'
 
+const hoursHeader = document.createElement('h1')
+hoursHeader.textContent = "Hours"
+hours.appendChild(hoursHeader)
+
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 for (let i = 0; i < 7; i++) {
     const list = document.createElement('li')
