@@ -99,7 +99,7 @@ const menuContent = () => {
     function createBeverageSection() {
         const beverageDiv = document.createElement('div')
         const beverageHeader = document.createElement('h1')
-        beverageDiv.textContent = "Beverage"
+        beverageHeader.textContent = "Beverage"
 
         const beverageKopi = document.createElement('h2')
         beverageKopi.textContent = "Kopi ($3)"
@@ -107,6 +107,7 @@ const menuContent = () => {
         const beverageTea = document.createElement('h2')
         beverageTea.textContent = "Tea ($1)"
 
+        beverageDiv.appendChild(beverageHeader)
         beverageDiv.appendChild(beverageKopi)
         beverageDiv.appendChild(beverageTea)
 
