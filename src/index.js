@@ -85,6 +85,7 @@ const menuContent = () => {
     content.textContent = ""
 
     content.appendChild(createNameSection())
+    content.appendChild(createBeverageSection())
 
     function createNameSection() {
         const nameDiv = document.createElement('div')
@@ -99,6 +100,17 @@ const menuContent = () => {
         const beverageDiv = document.createElement('div')
         const beverageHeader = document.createElement('h1')
         beverageDiv.textContent = "Beverage"
+
+        const beverageKopi = document.createElement('h2')
+        beverageKopi.textContent = "Kopi ($3)"
+
+        const beverageTea = document.createElement('h2')
+        beverageTea.textContent = "Tea ($1)"
+
+        beverageDiv.appendChild(beverageKopi)
+        beverageDiv.appendChild(beverageTea)
+
+        return beverageDiv
     }
 
     function createMainDishSection() {
