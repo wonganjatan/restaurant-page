@@ -86,6 +86,7 @@ const menuContent = () => {
 
     content.appendChild(createNameSection())
     content.appendChild(createBeverageSection())
+    content.appendChild(createMainDishSection())
 
     function createNameSection() {
         const nameDiv = document.createElement('div')
@@ -115,8 +116,22 @@ const menuContent = () => {
     }
 
     function createMainDishSection() {
+        const mainDishDiv = document.createElement('div')
+        const mainDishHeader = document.createElement('h1')
+        mainDishHeader.textContent = "Main Dish"
 
-    }
+        const mainDishNasiGoreng = document.createElement('h2')
+        mainDishNasiGoreng.textContent = "Nasi Goreng ($5)"
+
+        const mainDishSateAyam = document.createElement('h2')
+        mainDishSateAyam.textContent = "Sate Ayam ($5)"
+
+        mainDishDiv.appendChild(mainDishHeader)
+        mainDishDiv.appendChild(mainDishNasiGoreng)
+        mainDishDiv.appendChild(mainDishSateAyam)
+
+        return mainDishDiv
+    }   
 
     function createDessertSection() {
 
