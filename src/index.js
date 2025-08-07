@@ -153,6 +153,78 @@ const menuContent = () => {
     }
 }
 
+const contactContent = () => {
+    content.textContent = ""
+
+    content.appendChild(createNameSection())
+    content.appendChild(createBeverageSection())
+    content.appendChild(createMainDishSection())
+    content.appendChild(createDessertSection())
+
+    function createNameSection() {
+        const nameDiv = document.createElement('div')
+        const nameHeader = document.createElement('h1')
+        nameHeader.textContent = "Contact Us"
+        nameDiv.appendChild(nameHeader)
+
+        return nameDiv
+    }
+
+    function createBeverageSection() {
+        const beverageDiv = document.createElement('div')
+        const beverageHeader = document.createElement('h1')
+        beverageHeader.textContent = "Beverage"
+
+        const beverageKopi = document.createElement('h2')
+        beverageKopi.textContent = "Kopi ($3)"
+
+        const beverageTea = document.createElement('h2')
+        beverageTea.textContent = "Tea ($1)"
+
+        beverageDiv.appendChild(beverageHeader)
+        beverageDiv.appendChild(beverageKopi)
+        beverageDiv.appendChild(beverageTea)
+
+        return beverageDiv
+    }
+
+    function createMainDishSection() {
+        const mainDishDiv = document.createElement('div')
+        const mainDishHeader = document.createElement('h1')
+        mainDishHeader.textContent = "Main Dish"
+
+        const mainDishNasiGoreng = document.createElement('h2')
+        mainDishNasiGoreng.textContent = "Nasi Goreng ($5)"
+
+        const mainDishSateAyam = document.createElement('h2')
+        mainDishSateAyam.textContent = "Sate Ayam ($5)"
+
+        mainDishDiv.appendChild(mainDishHeader)
+        mainDishDiv.appendChild(mainDishNasiGoreng)
+        mainDishDiv.appendChild(mainDishSateAyam)
+
+        return mainDishDiv
+    }   
+
+    function createDessertSection() {
+        const dessertDiv = document.createElement('div')
+        const dessertHeader = document.createElement('h1')
+        dessertHeader.textContent = "Dessert"
+
+        const dessertIceCream = document.createElement('h2')
+        dessertIceCream.textContent = "Ice Cream ($3)"
+
+        const dessertCiki = document.createElement('h2')
+        dessertCiki.textContent = "Ciki ($1)"
+
+        dessertDiv.appendChild(dessertHeader)
+        dessertDiv.appendChild(dessertIceCream)
+        dessertDiv.appendChild(dessertCiki)
+
+        return dessertDiv
+    }
+}
+
 
 home.addEventListener('click', () => {
     homeContent()
@@ -163,7 +235,7 @@ menu.addEventListener('click', () => {
 })
 
 contact.addEventListener('click', () => {
-    alert("You clicked Contact")
+    contactContent()
 })
 
 homeContent()
