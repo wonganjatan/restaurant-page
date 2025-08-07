@@ -87,6 +87,7 @@ const menuContent = () => {
     content.appendChild(createNameSection())
     content.appendChild(createBeverageSection())
     content.appendChild(createMainDishSection())
+    content.appendChild(createDessertSection())
 
     function createNameSection() {
         const nameDiv = document.createElement('div')
@@ -134,7 +135,21 @@ const menuContent = () => {
     }   
 
     function createDessertSection() {
+        const dessertDiv = document.createElement('div')
+        const dessertHeader = document.createElement('h1')
+        dessertHeader.textContent = "Dessert"
 
+        const dessertIceCream = document.createElement('h2')
+        dessertIceCream.textContent = "Ice Cream ($3)"
+
+        const dessertCiki = document.createElement('h2')
+        dessertCiki.textContent = "Ciki ($1)"
+
+        dessertDiv.appendChild(dessertHeader)
+        dessertDiv.appendChild(dessertIceCream)
+        dessertDiv.appendChild(dessertCiki)
+
+        return dessertDiv
     }
 }
 
